@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"Drum Kit"</title>
+</head>
+<body>
+    <div class="buttons">
+        <div key_number="81" class="sound_button">
+        <kbd>Q</kbd>
+        <span class="sound">hihat</span>
+    </div>
+        <div key_number="87" class="sound_button">
+        <kbd>W</kbd>
+        <span class="sound">clap</span>
+    </div>
+        <div key_number="69" class="sound_button">
+        <kbd>E</kbd>
+        <span class="sound">openhat</span>
+    </div>
+        <div key_number="82" class="sound_button">
+        <kbd>R</kbd>
+        <span class="sound">boom</span>
+    </div>
+        <div key_number="84" class="sound_button">
+        <kbd>T</kbd>
+        <span class="sound">ride</span>
+    </div>
+        <div key_number="89" class="sound_button">
+        <kbd>Y</kbd>
+        <span class="sound">snare</span>
+    </div>
+        <div key_number="85" class="sound_button">
+        <kbd>U</kbd>
+        <span class="sound">tom</span>
+    </div>
+</div>
+    <audio key_number ="81" src="sounds/hihat.wav"></audio>
+    <audio key_number ="87" src="sounds/clap.wav"></audio>
+    <audio key_number ="69" src="sounds/openhat.wav"></audio>
+    <audio key_number ="82" src="sounds/boom.wav"></audio>
+    <audio key_number ="84" src="sounds/ride.wav"></audio>
+    <audio key_number ="89" src="sounds/snare.wav"></audio>
+    <audio key_number ="85" src="sounds/tom.wav"></audio>
+
+<script>
+    function removeTransition(e) {
+    if (e.propertyName !== 'transform') return;
+    e.target.classList.remove('playing');
+  }
+
+  function playSound(e) {
+    const audio = document.querySelector(`audio[key_number="${e.keyCode}"]`);
+    const sound_button = document.querySelector(`div[key_number="${e.keyCode}"]`);
+    if (!audio) return;
+
+    sound_button.classList.add('playing');
+    audio.currentTime = 0;
+    audio.play();
+  }
+
+  const buttons = Array.from(document.querySelectorAll('.sound_button'));
+  buttons.forEach(sound_button => sound_button.addEventListener('transitionend', removeTransition));
+  window.addEventListener('keydown', playSound);
+</script>
+    
+
+
+</script>
+</body>
+</html>
