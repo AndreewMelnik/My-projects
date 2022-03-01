@@ -15,13 +15,23 @@ for (let i = 0; i < 2; i++) {
   const nameOfFilms = prompt("Один из последних просмотренных фильмов?",""),
         ratingOfFilms = prompt("Нас сколько оцените его?","");
 
-  personalMovieDB.movies [nameOfFilms] = ratingOfFilms;  
+  if (nameOfFilms !=null && nameOfFilms !='' && nameOfFilms.length < 50 && 
+  ratingOfFilms !=null && ratingOfFilms !='' && ratingOfFilms.length < 50) {
+
+      personalMovieDB.movies [nameOfFilms] = ratingOfFilms; 
+      alert('done!');
+    } else {
+      alert('error!');
+      i--;
+    }
 }
 
-for (let i = 0; i >= personalMovieDB.movies.length; i++){
-  if (i == personalMovieDB.movies.length) continue;
-  if ( personalMovieDB.movies.length == 50) continue;
+   
 
-}
+
+
+  
+
+
  
  console.log(personalMovieDB);
