@@ -7,12 +7,21 @@ const personalMovieDB = {
   actors: {},
   genres: [],
   private: false,
+  
 };
-const nameOfFilms = prompt("Один из последних просмотренных фильмов?",""),
-      ratingOfFilms = prompt("Нас сколько оцените его?",""),
-      nameOfFilms2 = prompt("Один из последних просмотренных фильмов?",""),
-      ratingOfFilms2 = prompt("Нас сколько оцените его?","");
 
-personalMovieDB.movies [nameOfFilms] = ratingOfFilms;    
-personalMovieDB.movies [nameOfFilms2] = ratingOfFilms2;   
-console.log(personalMovieDB);
+
+for (let i = 0; i < 2; i++) {
+  const nameOfFilms = prompt("Один из последних просмотренных фильмов?",""),
+        ratingOfFilms = prompt("Нас сколько оцените его?","");
+
+  personalMovieDB.movies [nameOfFilms] = ratingOfFilms;  
+}
+
+for (let i = 0; i >= personalMovieDB.movies.length; i++){
+  if (i == personalMovieDB.movies.length) continue;
+  if ( personalMovieDB.movies.length == 50) continue;
+
+}
+ 
+ console.log(personalMovieDB);
