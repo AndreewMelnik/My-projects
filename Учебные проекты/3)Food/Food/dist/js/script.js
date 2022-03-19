@@ -1,4 +1,4 @@
-// Подключим табы к меню на сайте справа
+//Подключим табы к меню на сайте справа
 window.addEventListener('DOMContentLoaded', () => {
 
     let tabs = document.querySelectorAll('.tabheader__item'), // Название категории питания из меню справа
@@ -98,8 +98,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     //Modal window
     const modalTrigger = document.querySelectorAll('[data-modal]'),
-        modal = document.querySelector('.modal'),
-        modalCloseBtn = document.querySelector('[data-close]');
+          modal = document.querySelector('.modal'),
+          modalCloseBtn = document.querySelector('[data-close]');
 
 
     function openModal() {
@@ -107,7 +107,7 @@ window.addEventListener('DOMContentLoaded', () => {
         modal.classList.remove('bounceOutDown');
         // Либо вариант с toggle - но тогда назначить класс в верстке
         document.body.style.overflow = 'hidden';
-        clearInterval(modalTimerId); // чтобы окно не открывалось по таймеру, если ты уже успел нажать на него
+        // clearInterval(modalTimerId); // чтобы окно не открывалось по таймеру, если ты уже успел нажать на него
     }
 
     modalTrigger.forEach(btn => {
@@ -125,7 +125,7 @@ window.addEventListener('DOMContentLoaded', () => {
     modalCloseBtn.addEventListener('click', closeModal);
 
     modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
+        if (e.target === modal || e.target.getAttribute('data-close' == '')) {
             closeModal();
         }
     });
@@ -136,15 +136,18 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     });
     //ДОБАВЛЯЕМ ТАЙМЕР НА ОТКРЫТИЕ МОДАЛЬНОГО ОКНА
-    // const modalTimerId = setTimeout(openModal, 6000);
+    const modalTimerId = setTimeout(openModal, 5000000);
 
     //pageYOffset - свойство окна Window,возвращает количество пикселей, на которое прокручен документ по вертикали (вниз или вверх).
     //.clientHeight - видимая часть сайта на данный момент
     //.scrollHeight - высота всей видимой области прокрутки(высота всего сайта крч)
     function showModalByScroll() {
-        if (window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight) {
+        if (window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight ) {
             openModal();
             window.removeEventListener('scroll', showModalByScroll);
+        if (openModal === true) {
+            return;
+        }
         }
     }
     window.addEventListener('scroll', showModalByScroll);
@@ -160,11 +163,11 @@ window.addEventListener('DOMContentLoaded', () => {
             this.classes = classes;
             this.parent = document.querySelector(parentSelector);
             this.transfer = 120;
-            this.changeToRub(); 
+            this.changeToRub();
         }
 
         changeToRub() {
-            this.price = this.price * this.transfer; 
+            this.price = this.price * this.transfer;
         }
 
         render() {
@@ -213,4 +216,124 @@ window.addEventListener('DOMContentLoaded', () => {
         ".menu .container"
     ).render();
 
+    // Отправляем формы на сервер
+
+    const forms = document.querySelectorAll('form');
+    const message = {
+        loading: 'img/form/spinner.svg',
+        success: 'Спасибо! Скоро мы с вами свяжемся',
+        failure: 'Что-то пошло не так...'
+    };
+
+    forms.forEach(item => {
+        postData(item);
+    });
+
+    function postData(form) {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            let statusMessage = document.createElement('img');
+            statusMessage.src = message.loading;
+            statusMessage.style.cssText = `
+                display: block;
+                margin: 0 auto;
+            `;
+            form.insertAdjacentElement('afterend', statusMessage);
+        
+            const formData = new FormData(form);
+
+            const object = {};
+            formData.forEach(function(value, key){
+                object[key] = value;
+            });
+
+            fetch('server.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(object)
+            })
+            .then(data => data.text())
+            .then(data => {
+                console.log(data);
+                showThanksModal(message.success);
+                statusMessage.remove();
+            }).catch(() => {
+                showThanksModal(message.failure);
+            }).finally(() => {
+                form.reset();
+            });
+        });
+    }
+    // Делаем красивое оповещение пользователя
+    function showThanksModal(message) {
+        const prevModalDialog = document.querySelector('.modal__dialog');
+        // скрываем старое модальное окно перед добавлением нового
+        prevModalDialog.classList.add('bounceOutDown');
+        openModal(); // функция отвечает ха создание модальных окон
+
+        const thanksModal = document.createElement('div');
+        thanksModal.classList.add('modal__dialog');
+        thanksModal.innerHTML = `
+            <div class="modal__content">
+                <div class="modal__close" data-close>×</div>
+                <div class="modal__title">${message}</div>
+            </div>
+        `;
+//добавляем класс в html:
+   document.querySelector('.modal').append(thanksModal);
+
+//возвращаем старое модальное окно( ставим таймаут на 4 сек. на новое модальное окно)
+setTimeout(() => {
+    thanksModal.remove();
+    prevModalDialog.classList.add('modal_vis');
+    prevModalDialog.classList.remove('bounceOutDown');
+    closeModal();
+}, 4000);
+}
+// Слайдер
+
+    const slider = document.querySelectorAll('.offer__slide'),
+          prevButton = document.querySelector('.offer__slider-prev'),
+          nextButton = document.querySelector('.offer__slider-next'),
+          total = document.querySelector('#total'),
+          current = document.querySelector('#current');
+
+    let sliderIndex = 1;
+
+    showSlides(sliderIndex); // !!!
+
+    function showSlides(n) {
+       if (n > slider.length){
+           sliderIndex = 1; // Если номер слайда > общего количества слайдов, то слайдер перемещается на 1 слайд
+       }
+
+       if (n < 1) {
+           sliderIndex = slider.length;
+       }
+
+       slider.forEach(item => item.style.display = 'none'); // скрываем все слайды
+
+       slider[sliderIndex - 1].style.display = 'block'; // показываем текущий слайд
+      
+       if (slider.length < 10) {
+        current.textContent =  `0${sliderIndex}`;
+    } else {
+        current.textContent =  sliderIndex;
+    }
+}
+    
+    function plusSlide(n) {
+        showSlides(sliderIndex += n);
+    }
+    prevButton.addEventListener('click',() => { // стрелка назад
+        plusSlide(-1);});
+
+    nextButton.addEventListener('click',() => { // стрелка вперед
+        plusSlide(1);});
+
+
 });
+

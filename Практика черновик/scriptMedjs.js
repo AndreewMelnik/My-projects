@@ -253,15 +253,141 @@
 
 // Rest оператор(...) и параметры по умолчанию
 
-const log = (function (a , b, ...rest) {
-console.log(a, b, rest);
-});
+// const log = (function (a , b, ...rest) {
+// console.log(a, b, rest);
+// });
 
-log('basic', 'rest','operator','usage');
+// log('basic', 'rest','operator','usage');
 
-// Параметры по умолчанию
+// // Параметры по умолчанию
 
-function calcOrDouble(number, basis = 2){ // basis=2 - параметр по умолчанию
-    console.log(number * basis);
-}
-calcOrDouble(3,5);
+// function calcOrDouble(number, basis = 2){ // basis=2 - параметр по умолчанию
+//     console.log(number * basis);
+// }
+// calcOrDouble(3,5);
+
+// JSON
+
+// const persone ={
+//     name: 'Alex',
+//     tel: '+74444444',
+//     parents: {
+//         mom: 'Olga',
+//         dad: 'Mike'
+//     }
+// };
+
+// const clone = JSON.parse(JSON.stringify(persone));
+// clone.parents.mom = 'Ann';
+// console.log(persone);
+// console.log(clone);
+
+// console.log(JSON.parse(JSON.stringify(persone)));
+
+// AJAX 
+
+//Promise (es6)
+
+// Классический колбэк :
+// console.log('Запрос данных...');
+
+// setTimeout(() => {
+//     console.log('Подготовка данных');
+
+//     const product = {
+//         name: 'TV',
+//         price: 2000
+//     };
+
+//     setTimeout(() => {
+//         product.status = 'ordered';
+//         console.log(product);
+//     },2000);
+// },2000);
+
+// // Promise :
+// console.log('Запрос данных...');
+
+// const request = new Promise(function(resolve, reject) {
+//     setTimeout(() => {
+//         console.log('Подготовка данных');
+    
+//         const product = {
+//             name: 'TV',
+//             price: 2000
+//         };
+//         resolve(product);
+//     },2000);
+// });
+
+// request.then((product) => {
+//     return new Promise((resolve, reject)=>{
+//         setTimeout(() => {
+//             product.status = 'ordered';
+//             resolve(product);
+//         }, 2000);
+//     });
+// }).then(data => {
+//     data.modify = true;
+//     return data;
+
+// }).then(data => {
+//     console.log(data);
+// });
+
+
+// const test = time => {
+//     return new Promise (resolve => {
+//         setTimeout(() => resolve(), time);
+//     });
+// };
+// //    test(1000).then(() => console.log('1000ms'));
+// //    test(2000).then(() => console.log('2000ms'));
+
+// // Ждем выполнения всех промисов, и потом выполняем действие
+// Promise.all([test(1000), test(2000)]).then(() => console.log('All'));
+
+// // Ждем выполнения самого быстрого промиса и выполняем действие
+// Promise.race([test(1000), test(2000)]).then(() => console.log('All'));
+
+// Методы перебора массивов
+
+//filter
+
+// const names = ['Ivan','Ann','Ksenia'];
+
+// const shortnames = names.filter(function(name) {
+//     return name.length < 5;
+// });
+// console.log(shortnames);
+
+//map - позволяет взять исходный массив и изменить каждый его элемент
+// - на выходе получается новый массив с измененными эл-ми
+
+// let answers = ['IvAn','AnnA','HELLo'];
+
+// const result = answers.map(item => {
+//     return item.toLocaleLowerCase();
+// });
+// console.log(result);
+
+// every/some
+
+// const som = [4, 'qwq','edede'];
+
+// console.log(som.some(item => typeof(item) === 'number')); //true
+
+// console.log(som.every(item => typeof(item) === 'number')); // false
+//т.к. не все эл-ты массива это числа
+
+// reduce 
+
+// const arr = [4,5,3,6,7,9];
+
+// const result = arr.reduce((sum, current)=> sum + current);
+
+// console.log(result); // получится сумма arr
+// // также с его помощью можно складывать строки в массиве в одну длинную строку
+
+
+
