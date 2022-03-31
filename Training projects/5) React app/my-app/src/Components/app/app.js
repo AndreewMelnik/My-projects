@@ -10,9 +10,9 @@ function App() {
 
   //имитируем данные пришедшие с сервера
 const serverData = [
-  {name: "John Smith", salary: 600 , increase: true},
-  {name: "Alfred Kohen", salary: 800 , increase: false},
-  {name: "Joe Black", salary: 300 , increase: false},
+  {name: "John Smith", salary: 600 , increase: true, id:1},
+  {name: "Alfred Kohen", salary: 800 , increase: false, id:2},
+  {name: "Joe Black", salary: 300 , increase: false, id:3},
 ];
 
   return (

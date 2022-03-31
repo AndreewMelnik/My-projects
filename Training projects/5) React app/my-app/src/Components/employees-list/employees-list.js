@@ -8,7 +8,7 @@ const EmployeesList = ({serverData}) => {
 
 const elements = serverData.map(item => {
     return ( 
-    <EmployeesListItem name = {item.name} salary = {item.salary} increase ={item.increase}/>
+    <EmployeesListItem key={item.id} name = {item.name} salary = {item.salary} increase ={item.increase}/>
     // или: EmployeesListItem name = {...item}
     // object-spread оператор, разворачивает нам объект
     )
