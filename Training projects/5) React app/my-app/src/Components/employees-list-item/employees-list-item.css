@@ -43,15 +43,21 @@
     height: 35px;
     text-align: center;
     line-height: 35px;
-    font-size: 16px;
+    font-size: 18.5px;
     color: #FFD700;
     transition: 0.3s all;
     transform: translateX(30px);
     opacity: 0;
 }
 
-.list-group-item.like .fa-star {
+.list-group-item.a_like .fa-star {
     opacity: 1;
+    transform: translateX(0px);
+}
+.list-group-item.a .fa-star {
+    font-size: 15px;
+    color: #7d7b6b;
+    opacity: 0.3;
     transform: translateX(0px);
 }
 
