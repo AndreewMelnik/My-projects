@@ -17,10 +17,9 @@ this.setState(({increase}) => ({increase: !increase}))//деструктуриз
             }
  // чтобы менялся цвет при нажатии на печеньку   
 render(){
-    const {name, salary} = this.props
-    const {increase} = this.state
-    const {like} = this.state
-
+    const {name, salary, onDelete} = this.props
+    const {increase, like} = this.state
+ 
 let classNames = "list-group-item d-flex justify-content-between a"
 if (increase) {
  classNames += " increase"
@@ -46,7 +45,8 @@ if (like) {
                 </button>
 
                 <button type="button"
-                        className="btn-trash btn-sm ">
+                        className="btn-trash btn-sm " 
+                        onClick ={onDelete}>
                     <i className="fas fa-trash"></i>
                 </button>
                 <i className="fas fa-star"></i>

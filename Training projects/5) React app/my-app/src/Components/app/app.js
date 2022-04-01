@@ -1,3 +1,5 @@
+import { Component} from 'react'
+
 import AppInfo from '../app-info/app-info';
 import SearchPanel from '../search-panel/search-panel';
 import AppFilter from '../app-filter/app-filter';
@@ -6,15 +8,31 @@ import EmployeesAddForm from '../employees-add-form/employees-add-form';
 
 import './app.css';
 
-function App() {
+class App extends Component {
+constructor(props) {
+  super(props);
+  this.state = {
+      //имитируем данные пришедшие с сервера
+    serverData:[
+      {name: "John Smith", salary: 600 , increase: true, id:1},
+      {name: "Alfred Kohen", salary: 800 , increase: false, id:2},
+      {name: "Joe Black", salary: 300 , increase: false, id:3}
+    ]
+  }
+}
+// удаляем элемент из массива с обьектами по id
+deleteItem = (id)=> {
+  this.setState(({serverData})=>{
+    //сравниваем id из нашего массива данных с id элемента со страницы
+    //  const index = data.findIndex(elem => elem.id === id);
+    //Метод filter() создаёт новый массив со всеми элементами, прошедшими проверку, задаваемую в передаваемой функции.
+    return {
+      serverData: serverData.filter(item => item.id !==id)
+    }
+  })
+}
 
-  //имитируем данные пришедшие с сервера
-const serverData = [
-  {name: "John Smith", salary: 600 , increase: true, id:1},
-  {name: "Alfred Kohen", salary: 800 , increase: false, id:2},
-  {name: "Joe Black", salary: 300 , increase: false, id:3},
-];
-
+ render() {
   return (
     <div className="app">
         <AppInfo />
@@ -24,10 +42,13 @@ const serverData = [
             <AppFilter/>
         </div>
         
-        <EmployeesList serverData={serverData}/> 
+        <EmployeesList 
+        serverData={this.state.serverData}
+        onDelete ={this.deleteItem}/> 
         <EmployeesAddForm/>
     </div>
   );
 }
+ }
 
 export default App;
