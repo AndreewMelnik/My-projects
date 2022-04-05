@@ -36,8 +36,8 @@ deleteItem = (id)=> {
 
 addItem = (name, salary) => {
   const newItem = {
-      name: 'John Smith', 
-      salary: 500,
+      name: name,
+      salary: salary,
       increase: false,
       like: false,
       id: this.maxId++
@@ -102,6 +102,23 @@ onUpdateSearch = (term) => {
   this.setState({term: term})
 }
 
+onPromoted =(like)=> {
+  this.setState(({serverData})=>{
+    return {
+      serverData: serverData.filter(item => item.like)
+    }
+  })
+}
+
+onRichest =(salary)=> {
+  this.setState(({serverData})=>{
+    return {
+      serverData: serverData.filter(item => item.salary > 1000)
+    }
+  })
+}
+
+
  render() {
 // чтобы в app.info добавить счетчик людей делаем две переменных:
 // чтобы узнать кол-во премий исп-ем метод filter-создаем новый массив
@@ -112,12 +129,11 @@ onUpdateSearch = (term) => {
   const visibleData = this.searchEmp(serverData, term);
   return (
     <div className="app">
-        <AppInfo 
-        employees={employees} rewarded={rewarded}/>
+        <AppInfo employees={employees} rewarded={rewarded}/>
 
         <div className="search-panel">
             <SearchPanel onUpdateSearch={this.onUpdateSearch}/>
-            <AppFilter/>
+            <AppFilter onPromoted={this.onPromoted} onRichest={this.onRichest}/>
         </div>
         
         <EmployeesList

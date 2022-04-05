@@ -1,6 +1,6 @@
 import "./app-filter.css";
 
-const AppFilter = () => {
+const AppFilter = ({onPromoted, onRichest}) => {
     return (
         <div className="btn-group">
             <button type="button"
@@ -8,11 +8,13 @@ const AppFilter = () => {
                     Все сотрудники
             </button>
             <button type="button"
-                    className="btn btn-outline-light">
+                    className="btn btn-outline-light"
+                    onClick={onPromoted}>
                     На повышение
             </button>
             <button type="button"
-                    className="btn btn-outline-light">
+                    className="btn btn-outline-light"
+                    onClick={onRichest}>
                     З/П больше 1000$
             </button>
         </div>
