@@ -1,46 +1,27 @@
-import { Component} from 'react';
 import './employees-list-item.css';
 
-class EmployeesListItem extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            increase: false,
-            like: false
-        }
-    }
-    onIncrease = () => {
-this.setState(({increase}) => ({increase: !increase}))//деструктуризация + круглые скобки чтобы не прописывать return
-    }
-    onLike = () => {
-        this.setState(({like}) => ({like: !like}))
-            }
- // чтобы менялся цвет при нажатии на печеньку   
-render(){
-    const {name, salary, onDelete} = this.props
-    const {increase, like} = this.state
+const EmployeesListItem = (props) => {
+   
+
+    const {name, salary, increase, like, onDelete,onToggleIncrease, onToggleRise} = props;
  
-let classNames = "list-group-item d-flex justify-content-between a"
-if (increase) {
- classNames += " increase"
-}
-if (like) {
+    let classNames = "list-group-item d-flex justify-content-between a"
+    if (increase) {
+     classNames += " increase"
+     }
+    if (like) {
           classNames += "_like"
-       
-       
-}
-//  let classNames1 = "list-group-item-label" 
-//  if (like) {
-//   classNames1 += " like"
+        }
+//  let classNames1 = "list-group-item-label" if (like) { classNames1 += " like"
 
     return (
         <li className={classNames}>
-            <span className= "list-group-item-label" onClick ={this.onLike}>{name}</span>
+            <span className= "list-group-item-label" onClick ={onToggleRise}>{name}</span>
             <input type="text" className="list-group-item-input" defaultValue={salary + ' ' + '$'}/>
             <div className='d-flex justify-content-center align-items-center'>
                 <button type="button"
                     className="btn-cookie btn-sm "
-                    onClick ={this.onIncrease}>
+                    onClick ={onToggleIncrease}>
                     <i className="fas fa-cookie"></i>
                 </button>
 
@@ -54,6 +35,6 @@ if (like) {
         </li>
   )
 }
-}
+
 
 export default EmployeesListItem;
