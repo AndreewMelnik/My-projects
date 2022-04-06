@@ -129,7 +129,7 @@ onRichest =(salary)=> {
   const visibleData = this.searchEmp(serverData, term);
   return (
     <div className="app">
-        <AppInfo employees={employees} rewarded={rewarded}/>
+        <AppInfo employees={employees} rewarded={rewarded} />
 
         <div className="search-panel">
             <SearchPanel onUpdateSearch={this.onUpdateSearch}/>
