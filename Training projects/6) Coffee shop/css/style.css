@@ -431,9 +431,33 @@ textarea {
 *,*::before, *::after {
     box-sizing: inherit;
 }
-.item{
-    width: 200px;
-    height: 100px;
-    background-color: green;
-    padding: 20px;
+
+.wrapper{
+   max-width: 1100px;
+   margin: 0 auto;
+}
+
+.body{
+  font-family: 'Montserrat', 'Nunito';
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: normal;
+  color: #151D28;
+}
+
+.header__wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.header__list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header__item{
+    margin-right: 70px;
 }
