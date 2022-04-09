@@ -490,10 +490,27 @@ textarea {
     background-size:cover;
     padding-top:250px;
 }
+
 .intro__title{
 font-family: 'Montserrat';
 font-style: normal;
 font-weight: 900;
 font-size: 54px;
 line-height: 70px;
+}
+
+.coffee__wrap{
+
+}
+
+.coffee__title1{
+
+}
+
+.coffee__title2{
+
+}
+
+.coffee__cards{
+    
 }
