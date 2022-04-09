@@ -560,14 +560,13 @@ let offset = 0; //отступ
 let slideIndex = 1;
 
 const slides = document.querySelectorAll('.offer__slide'),
-    slider = document.querySelector('.offer__slider'),
-    prev = document.querySelector('.offer__slider-prev'),
-    next = document.querySelector('.offer__slider-next'),
-    total = document.querySelector('#total'),
-    current = document.querySelector('#current'),
-    slidesWrapper = document.querySelector('.offer__slider-wrapper'),
-    width = window.getComputedStyle(slidesWrapper).width,
-    slidesField = document.querySelector('.offer__slider-inner');
+      slider = document.querySelector('.offer__slider'),
+      prev = document.querySelector('.offer__slider-prev'),
+      next = document.querySelector('.offer__slider-next'),
+      current = document.querySelector('#current'),
+      slidesWrapper = document.querySelector('.offer__slider-wrapper'),
+      width = window.getComputedStyle(slidesWrapper).width,
+      slidesField = document.querySelector('.offer__slider-inner');
 
 if (slides.length < 10) {
     total.textContent = `0${slides.length}`;
