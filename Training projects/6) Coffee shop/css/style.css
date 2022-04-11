@@ -511,6 +511,7 @@ textarea {
 
 .coffee__wrap{
     max-width: 1104px;
+    max-height:550px;
     height: 100vh;
     margin: 0 auto;
 
