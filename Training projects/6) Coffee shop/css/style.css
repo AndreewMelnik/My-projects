@@ -508,7 +508,6 @@ textarea {
     line-height: 70px;
     /* or 130% */
     color: #415167;
-    
 }
 
 /* COFFEE BLOCK */
@@ -518,7 +517,6 @@ textarea {
     max-height:550px;
     height: 100vh;
     margin: 0 auto;
-
 }
 
 .subtitle{
@@ -595,3 +593,107 @@ textarea {
 }
 
 /* PRODUCT */
+
+/*?                       Product                      */
+.product {
+    /* position: relative; */
+    padding: 90px 0px 128px 0px;
+ }
+
+  .product__text {
+    margin-bottom: 50px;
+ }
+
+ .product__slider__top {
+    /* position: relative; */
+    padding: 0px 0px 0px 130px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    min-width: 0;
+ }
+
+ .product__slider_btm {
+    /* position: relative; */
+    padding: 0px 0px 0px 130px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    min-width: 0;
+ }
+
+ .slider__item {
+    display: flex;
+    align-items: center;
+    width: 559px;
+    height: 256px;
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    background-color: #fff;
+ }
+ .product__image{
+     background-color:#EDF0F5;
+ }
+
+ .product__img {
+    background-color: #edf0f5;
+ }
+
+ .product__content {
+    padding: 42px;
+ }
+
+ .product__price {
+    font-family: "Nunito";
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    color: #c7a17a;
+    margin-bottom: 8px;
+ }
+
+ .prouct__name {
+    font-family: "Nunito";
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #232c38;
+ }
+
+ .product__description {
+    font-family: "Nunito";
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 32px;
+    color: #151d28;
+ }
+ .product__btn{
+
+ }
+ .product__btn__buy{
+    border: none;
+    width: 135px;
+    height: 32px;
+    text-transform: uppercase;
+    background: #c7a17a;
+    border-radius: 19px;
+    font-family: "Nunito";
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: #f9fbff;
+}
+
+ .product__btn__det{
+    border: none;
+    background:none;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    padding-left: 30px;
+    color: #415167;
+ }
+ 
