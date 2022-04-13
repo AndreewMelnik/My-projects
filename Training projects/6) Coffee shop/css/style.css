@@ -598,6 +598,7 @@ textarea {
 .product {
     /* position: relative; */
     padding: 90px 0px 128px 0px;
+    
  }
 
   .product__text {
@@ -651,7 +652,7 @@ textarea {
     margin-bottom: 8px;
  }
 
- .prouct__name {
+ .product__name {
     font-family: "Nunito";
     font-weight: 700;
     font-size: 24px;
@@ -670,7 +671,7 @@ textarea {
  .product__btn{
 
  }
- .product__btn__buy{
+ .buy{
     border: none;
     width: 135px;
     height: 32px;
@@ -685,7 +686,7 @@ textarea {
     color: #f9fbff;
 }
 
- .product__btn__det{
+ .desc{
     border: none;
     background:none;
     font-family: 'Nunito';
@@ -696,4 +697,102 @@ textarea {
     padding-left: 30px;
     color: #415167;
  }
+ 
+/* Giftset */
+
+.giftset {
+    padding: 86px 0px 125px 20px;
+    margin-bottom: 100px;
+    position: relative;
+    background-color: #edf0f5;
+ }
+ 
+ .giftset__tab {
+    display: flex;
+    max-width: 1138px;
+    margin: 0 auto;
+    position: relative;
+    background-color: #fff;
+    
+ }
+
+ .tab-triggers {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #f6f8fc;
+ }
+
+ .tabs-triggers__item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 34px;
+    color: #415167;
+    text-decoration: none;
+    padding: 0px 25px;
+ }
+ 
+ .tabs-content {
+ }
+
+ .tabs-content__item {
+    display: flex;
+    position: relative;
+ }
+ 
+ .giftset__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 60px 40px 40px;
+ }
+
+ .giftset__price {
+    margin-bottom: 12px;
+ }
+
+ .giftset__name {
+    margin-bottom: 12px;
+ }
+
+ .giftset__description {
+    margin-bottom: 24px;
+ }
+
+ .giftset__info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 46px;
+    padding: 0px 20px;
+ }
+
+ .giftset__info_1,
+ .giftset__info_2 {
+    display: flex;
+ }
+ 
+
+ .info__title,
+ .info__subtitle {
+    font-family: "Nunito";
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 22px;
+    color: #415167;
+ }
+ .giftset__link {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+ }
+
+
  
