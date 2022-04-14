@@ -592,6 +592,44 @@ textarea {
     justify-content: center
 }
 
+@media (max-width: 1199px) {
+    .coffee__cards {
+        grid-template-columns: repeat(2, 2fr);
+        margin-bottom: 50px;
+    }
+    .coffee__card {
+       max-width: 33.3333%;
+       margin-bottom: 50px;
+    }
+    .coffee__card-desc{
+        line-height: 20px;
+
+    }
+   
+ }
+ @media (max-width: 760px) {
+    .coffee__cards {
+        grid-template-columns: repeat(2, 2fr);
+        margin-bottom: 50px;
+    }
+    .coffee__card {
+        max-width: 33.3333%;
+        margin-bottom: 50px;
+     }
+     .coffee__card-desc{
+        line-height: 20px;
+
+    }
+    /* .base {
+       padding: 0px 100px;
+       padding-bottom: 20px;
+       margin-bottom: 20px;
+    }
+    .base__image {
+       margin-bottom: 20px;
+    } */
+ }
+
 /* PRODUCT */
 
 /*?                       Product                      */
@@ -599,6 +637,16 @@ textarea {
     /* position: relative; */
     padding: 90px 0px 128px 0px;
     
+ }
+
+ .product__color{
+    position: absolute;
+    left: 0;
+    top: 1350px;
+    height: 100%;
+    width: 23%;
+    background-color: #415167;
+    z-index: -10;
  }
 
   .product__text {
@@ -780,13 +828,21 @@ textarea {
  }
  
 
- .info__title,
- .info__subtitle {
+ .info__title{
     font-family: "Nunito";
     font-weight: 300;
     font-size: 16px;
     line-height: 22px;
+    color: #415167;   
+ }
+
+ .info__subtitle {
+    font-family: "Nunito";
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
     color: #415167;
+
  }
  .giftset__link {
     display: flex;
