@@ -750,7 +750,7 @@ textarea {
 
 .giftset {
     padding: 86px 0px 125px 20px;
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
     position: relative;
     background-color: #edf0f5;
  }
@@ -850,5 +850,58 @@ textarea {
     padding: 0px 20px;
  }
 
+/* Combo */
 
+.combo {
+    padding-left: 100px;
+    padding-bottom: 128px;
+ }
+ .combo__text {
+ }
+ .combo__subtitle {
+ }
+ .combo__title {
+    margin-bottom: 66px;
+ }
+ .combo__slider {
+ }
+ .combo__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+ }
+ .combo__img {
+    background-color: #edf0f5;
+ }
+ .product__image {
+ }
+ .combo__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    max-width: 360px;
+ }
+ .combo__price {
+ }
+ .old-price {
+    text-decoration: line-through;
+    color: rgb(0, 0, 0);
+    margin-left: 15px;
+ }
+ .combo__name {
+ }
+ 
+ .combo__description {
+    white-space: wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 50px;
+    padding-top: 9px;
+ }
+ 
+ .combo__sale {
+ }
+ .combo__button {
+ }
  
