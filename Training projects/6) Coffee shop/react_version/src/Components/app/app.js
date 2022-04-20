@@ -1,5 +1,6 @@
 import { Component} from 'react'
 import Header from '../header/header';
+import Features from '../features/features';
 // import Intro from '../intro/intro';
 // import Features from '../features/features';
 // import ProductSlider from '../product-slider/product-slider';
@@ -14,6 +15,7 @@ class App extends Component {
       return (
         <div>
           <Header/>
+          <Features/>
         </div>
     );
   }

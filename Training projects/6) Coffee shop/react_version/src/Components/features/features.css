@@ -1,0 +1,109 @@
+
+.coffee__wrap{
+    max-width: 1104px;
+    max-height:550px;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.subtitle{
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    /* or 120% */
+    
+    text-align: center;
+    padding-top: 87px;
+    
+    color: #415167;
+}
+
+.title{
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 34px;
+    /* or 113% */
+    text-align: center;
+    padding-top: 8.5px;
+    
+    color: #415167;
+}
+
+.coffee__cards{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 66px;
+    padding: 0 100 px;
+}
+
+.coffee__card{
+    grid-column:span 1;
+}
+
+
+
+.coffee__card-pic{
+   padding-top: 85px;
+   display: flex;
+   align-items: center;
+   justify-content: center
+}
+
+.coffee__card-title{
+    padding-top: 28px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.coffee__card-desc{
+    padding-top: 7px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16.5px;
+    line-height: 22px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+@media (max-width: 1199px) {
+    .coffee__cards {
+        grid-template-columns: repeat(2, 2fr);
+        margin-bottom: 50px;
+    }
+    .coffee__card {
+       max-width: 33.3333%;
+       margin-bottom: 50px;
+    }
+    .coffee__card-desc{
+        line-height: 20px;
+
+    }
+   
+ }
+ @media (max-width: 760px) {
+    .coffee__cards {
+        grid-template-columns: repeat(2, 2fr);
+        margin-bottom: 50px;
+    }
+    .coffee__card {
+        max-width: 33.3333%;
+        margin-bottom: 50px;
+     }
+     .coffee__card-desc{
+        line-height: 20px;
+
+    }
