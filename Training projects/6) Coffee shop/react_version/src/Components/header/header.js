@@ -1,4 +1,5 @@
-import "./header";
+import "./header.css";
+import revoLogo from "../../img/svg/revo_logo.svg";
 
 
 const Header = () => {
@@ -13,9 +14,9 @@ const Header = () => {
 
 const HeaderWrapper = () => {
     return(
-            <div class="header_logo">
-                <a href="!#" class="header_logo-link">
-                    <img src="./img/svg/revo_logo.svg" alt="Your Personalized Coffee" class="header__logo-pic"/>
+            <div className="header_logo">
+                <a href="!#" className="header_logo-link">
+                    <img src={revoLogo}  alt="Your Personalized Coffee" className="header__logo-pic"/>
                 </a>
             </div>
     )
@@ -23,8 +24,8 @@ const HeaderWrapper = () => {
 
 const HeaderMenu = () => {
     return(
-        <nav class="header__menu">
-        <ul class="header__list">
+        <nav className="header__menu">
+        <ul className="header__list">
             <HeaderItem name="Coffee" />
             <HeaderItem name="Giftsets" />
             <HeaderItem name="House Blends" />
@@ -37,9 +38,9 @@ const HeaderMenu = () => {
 
 const HeaderItem = (props) => {
     return(
-          <li class="header__item">
-              <a href="#!" class="header__link">{props.name}</a>
-          </li> 
+          <div className="header__item">
+              <a href="#!" className="header__link">{props.name}</a>
+          </div> 
  )
 }
 
