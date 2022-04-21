@@ -1,54 +1,60 @@
+import{ Component}from 'react'
 import "./product-slider.css";
 
-import morning from "../../img/svg/morning";
-import origin from "../../img/svg/origin";
-import everyday from "../../img/svg/everyday";
-import rich from "../../img/svg/rich";
-import honey from "../../img/png/honey";
-import natural from "../../img/png/natural";
+import Morning from "../../img/svg/morning";
+import Origin from "../../img/svg/origin";
+import Everyday from "../../img/svg/everyday";
+import Rich from "../../img/svg/rich";
+import Honey from "../../img/png/honey";
+import Natural from "../../img/png/natural";
 
-
-const ProductSlider = () => {
-
-    return (
-        <div className="product">
+class ProductSlider  extends Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+          // Imitating Server Data
+        serverData:[
+          {name: "REVO Morning", price: "$ 19.00", description: "Bitter, sweet aftertaste, floral aroma", src: {Morning},id:1},
+          {name: "REVO Origin", price: "$ 22.00", description: "Sweet, less bitter, sour strawberry flavour", src: {Origin},id:2},
+          {name: "REVO Everyday", price: "$ 17.00", description: "Balanced, bitter taste of chocolate", src: {Everyday},id:3},
+          {name: "REVO Rich", price: "$ 16.00", description: "Rich, bitter, traditional flavour", src: {Rich},id:4},
+          {name: "REVO Honey", price: "$ 19.00", description: "Sweet , with a slight apple sourness", src: {Honey},id:5},
+          {name: "REVO Natural", price: "$ 19.00", description: "Sweet aftertaste, floral scent, strawberry sour taste", src: {Natural},id:6}
+        ]
+      }
+    }
+        render() {
+          return (
+           <div className="product">
             <ProductText/>
-            <HeaderMenu/>
+            <SliderItem/>
         </div>
-    )
-}
-
-const HeaderWrapper = () => {
-    return(
-            <div className="header__logo">
-                <a href="!#" className="header__logo-link">
-                    <img src={revoLogo}  alt="Your Personalized Coffee" className="header__logo-pic"/>
-                </a>
+        );
+      }
+    }
+    
+    
+    const SliderItem = ({serverData}) => {
+      //динамически формируем список с помощью "map"
+      //пишем колбэк ф-ию где 'item'-каждый отдельный элемент который будет последовательно идти в массиве
+      
+      const elements = serverData.map(item => {
+      const{id} = item
+      
+            return ( 
+         <ProductCard {...item} key={id}/> 
+          )
+      })
+          return (
+            <div className="product__content">
+                {elements}
             </div>
-    )
-}
+        )
+    
+      
+   }
 
-const HeaderMenu = () => {
-    return(
-        <nav className="header__menu">
-        <ul className="header__list">
-            <HeaderItem name="COFFEE" />
-            <HeaderItem name="GIFTSETS" />
-            <HeaderItem name="HOUSE BLENDS" />
-            <HeaderItem name="COMBO SETS" />
-            <HeaderItem name="CONTACT US" />
-        </ul>
-    </nav>
-    )
-}
 
-const HeaderItem = (props) => {
-    return(
-          <div className="header__item">
-              <a href="#!" className="header__link">{props.name}</a>
-          </div> 
- )
-}
 const ProductText = (props) => {
     return(
         <div class="product__text">
@@ -58,130 +64,25 @@ const ProductText = (props) => {
  )
 }
 
-const ProductImg = (props) => {
+
+const ProductCard = (props) => {
+
+   const {name, price, description,src} = props;
     return(
+      <div class="slider__item">
         <div class="product__img">
-          <img src="./img/svg/morning.svg" alt="morning" class="product__image">
+          <img src={src} alt={name} class="product__image"/>
         </div>
+          <div class="product__price price product__price">{price}</div>
+          <h1 class="product__name product__name">{name}</h1>
+          <h2 class="product__description product__description">{description}</h2>
+          <div class="product__btn">
+            <button class="product____btn buy">BUY NOW</button>
+            <button class="product____btn desc">MORE</button>
+          </div>
+       </div>
  )
 }
 
 
-
-
-
-<div class="slider__item">
-       <div class="product__img">
-          <img src="./img/svg/morning.svg" alt="morning" class="product__image">
-       </div>
-       <div class="product__content">
-          <div class="product__price price product__price">$ 19.00</div>
-          <h1 class="product__name product__name">REVO Morning</h1>
-          <h2 class="product__description product__description">Bitter, sweet aftertaste, floral aroma</h2>
-          <div class="product__btn">
-            <button class="product____btn buy">BUY NOW</button>
-            <button class="product____btn desc">MORE</button>
-          </div>
-       </div>
-    </div>
-
-
-
-
-
-
 export default ProductSlider;
-
-<section class="product">
-
-<div class="slider">
-  <div class="product__slider__top">
-    <div class="slider__item">
-       <div class="product__img">
-          <img src="./img/svg/morning.svg" alt="morning" class="product__image">
-       </div>
-       <div class="product__content">
-          <div class="product__price price product__price">$ 19.00</div>
-          <h1 class="product__name product__name">REVO Morning</h1>
-          <h2 class="product__description product__description">Bitter, sweet aftertaste, floral aroma</h2>
-          <div class="product__btn">
-            <button class="product____btn buy">BUY NOW</button>
-            <button class="product____btn desc">MORE</button>
-          </div>
-       </div>
-    </div>
-    <div class="slider__item">
-       <div class="product__img">
-          <img src="./img/svg/origin.svg" alt="origin" class="product__image">
-       </div>
-       <div class="product__content">
-          <div class="product__price product__price">$ 22.00</div>
-            <h1 class="product__name product__name">REVO Origin</h1>
-            <h2 class="product__description product__description">Sweet, less bitter, sour strawberry flavour</h2>
-             <div class="product__btn">
-               <button class="product____btn buy">BUY NOW</button>
-               <button class="product____btn desc">MORE</button>
-             </div>
-          </div>
-       </div>
-    <div class="slider__item">
-       <div class="product__img">
-          <img src="./img/svg/everyday.svg" alt="everyday" class="product__image">
-       </div>
-       <div class="product__content">
-          <div class="product__price product__price">$ 17.00</div>
-          <h1 class="product__name product__name">REVO Everyday</h1>
-          <h2 class="product__description product__description">Balanced, bitter taste of chocolate</h2>
-          <div class="product__btn">
-            <button class="product____btn buy">BUY NOW</button>
-            <button class="product____btn desc">MORE</button>
-          </div>
-       </div>
-    </div>
- </div>
-
-    <div class="product__slider_btm">
-     <div class="slider__item">
-       <div class="product__img">
-          <img src="./img/svg/rich.svg" alt="" class="product__image">
-       </div>
-       <div class="product__content">
-          <div class="product__price product__price">$ 16.00</div>
-          <h1 class="product__name product__name">REVO Rich</h1>
-          <h2 class="product__description product__description">Rich, bitter, traditional flavour</h2>
-          <div class="product__btn">
-            <button class="product____btn buy">BUY NOW</button>
-            <button class="product____btn desc">MORE</button>
-          </div>
-       </div>
-    </div>
-     <div class="slider__item">
-       <div class="product__img">
-          <img src="./img/png/honey.png" alt="honey" class="product__image">
-       </div>
-       <div class="product__content">
-          <div class="product__price product__price">$ 19.00</div>
-          <h1 class="product__name product__name">REVO Honey</h1>
-          <h2 class="product__description product__description">Sweet , with a slight apple sourness</h2>
-          <div class="product__btn">
-            <button class="product____btn buy">BUY NOW</button>
-            <button class="product____btn desc">MORE</button>
-          </div>
-       </div>
-    </div>
-    <div class="slider__item">
-       <div class="product__img">
-          <img src="./img/png/natural.png" alt="natural" class="product__image">
-       </div>
-       <div class="product__content">
-          <div class="product__price product__price">$ 19.00</div>
-          <h1 class="prouct__name product__name">REVO Natural</h1>
-          <h2 class="product__description product__description">Sweet aftertaste, floral scent, strawberry sour taste</h2>
-          <div class="product__btn">
-            <button class="product____btn buy">BUY NOW</button>
-            <button class="product____btn desc">MORE</button>
-          </div>
-       </div>
-    </div> 
- </div>
-</section>
