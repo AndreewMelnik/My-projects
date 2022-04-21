@@ -26,11 +26,11 @@ const HeaderMenu = () => {
     return(
         <nav className="header__menu">
         <ul className="header__list">
-            <HeaderItem name="Coffee" />
-            <HeaderItem name="Giftsets" />
-            <HeaderItem name="House Blends" />
-            <HeaderItem name="Combo Sets" />
-            <HeaderItem name="Contact us" />
+            <HeaderItem name="COFFEE" />
+            <HeaderItem name="GIFTSETS" />
+            <HeaderItem name="HOUSE BLENDS" />
+            <HeaderItem name="COMBO SETS" />
+            <HeaderItem name="CONTACT US" />
         </ul>
     </nav>
     )

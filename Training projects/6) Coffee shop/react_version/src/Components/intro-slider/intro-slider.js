@@ -8,7 +8,7 @@ const IntroSlider = () => {
         <section className="intro">
         <div className="wrapper">
           <div className="intro__text">
-            <h1 claclassNamess="intro__title">
+            <h1 className="intro__title">
               YOUR PERSONALIZED COFEE
             </h1>
             <p className="intro__subtitle">
