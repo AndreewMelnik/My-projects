@@ -1,12 +1,7 @@
-.header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color:white;
-}
 
-.header__logo{
+
+
+.header{
     position: fixed;
     top: 0;
     left: 0;
@@ -14,8 +9,8 @@
     background-color:white;
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-end;
-    justify-content: space-between;
+    align-items: flex-start;
+    justify-content: center;
     padding-top: 40px;
     padding-bottom: 40px;
     
@@ -38,6 +33,13 @@
     line-height: 29px;
     color: black;
     text-decoration: none;
+}
+
+.header__logo{
+    position: absolute;
+    margin-left: 91px;
+    margin-right: 1180px;
+   
 }
 
 

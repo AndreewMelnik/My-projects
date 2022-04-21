@@ -14,8 +14,8 @@ const Header = () => {
 
 const HeaderWrapper = () => {
     return(
-            <div className="header_logo">
-                <a href="!#" className="header_logo-link">
+            <div className="header__logo">
+                <a href="!#" className="header__logo-link">
                     <img src={revoLogo}  alt="Your Personalized Coffee" className="header__logo-pic"/>
                 </a>
             </div>
