@@ -1,8 +1,8 @@
 import {Component} from 'react'
 import "./product-slider.css";
-import { Carousel,Container, Row, Col } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
 import Morning from "../../img/svg/morning.svg";
 import Origin from "../../img/svg/origin.svg";
@@ -10,20 +10,69 @@ import Everyday from "../../img/svg/everyday.svg";
 import Rich from "../../img/svg/rich.svg";
 import Honey from "../../img/png/honey.png";
 import Natural from "../../img/png/natural.png";
-// import Aaa from "./aaa";
-class ProductSlider  extends Component {
 
-        render() {
-          return (
-           <div className="product">
-            <ProductText/>
-           
-            <SliderItem/>
-            <Carousel/>
-        </div>
-        );
-      }
-    }
+export default class MultipleRows extends Component {
+  render() {
+    const settings = {
+      className: "center",
+      centerMode: true,
+      infinite: true,
+      centerPadding: "60px",
+      slidesToShow: 1,
+      speed: 500,
+      rows: 2,
+      slidesPerRow: 1
+    };
+    return (
+      <div className="product">
+        <ProductText/>
+      <div>
+        <Slider {...settings}>
+          <div>
+            <h3><ProductCard id="1"/></h3>
+          </div>
+          <div>
+            <h3><ProductCard id="2"/></h3>
+          </div>
+          <div>
+            <h3><ProductCard id="3"/></h3>
+          </div>
+          <div>
+            <h3><ProductCard id="4"/></h3>
+          </div>
+          <div>
+            <h3><ProductCard id="5"/></h3>
+          </div>
+          <div>
+            <h3><ProductCard id="6"/></h3>
+          </div>
+          <div>
+            <h3><ProductCard id="1"/></h3>
+          </div>
+          <div>
+            <h3><ProductCard id="2"/>8</h3>
+          </div>
+          
+        </Slider>
+      </div>
+      </div>
+    );
+  }
+}
+
+
+
+// class ProductSlider  extends Component {
+
+//         render() {
+//           return (
+//            <div className="product">
+//             <ProductText/>
+//             <SliderItem/>
+//         </div>
+//         );
+//       }
+//     }
     
 
 class SliderItem extends Component {
@@ -75,51 +124,8 @@ class ProductCard extends Component  {
 )}}
 
 
-<Container>
-  <Row>
-    <Col>
-    <Carousel>
-  <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src={Morning}
-      alt="First slide"
-    />
-    <Carousel.Caption>
-      <h3>First slide label</h3>
-      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-    </Carousel.Caption>
-  </Carousel.Item>
-  <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src={Morning}
-      alt="Second slide"
-    />
-
-    <Carousel.Caption>
-      <h3>Second slide label</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </Carousel.Caption>
-  </Carousel.Item>
-  <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src={Morning}
-      alt="Third slide"
-    />
-
-    <Carousel.Caption>
-      <h3>Third slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-    </Carousel.Caption>
-  </Carousel.Item>
-</Carousel>
-    </Col>
-  </Row>
-</Container>
+// export default ProductSlider;
 
 
 
 
-export default ProductSlider;
