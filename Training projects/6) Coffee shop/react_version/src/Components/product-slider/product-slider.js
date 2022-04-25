@@ -18,7 +18,7 @@ export default class MultipleRows extends Component {
       centerMode: true,
       infinite: true,
       centerPadding: "60px",
-      slidesToShow: 1,
+      slidesToShow: 2,
       speed: 500,
       rows: 2,
       slidesPerRow: 1
@@ -28,6 +28,10 @@ export default class MultipleRows extends Component {
         <ProductText/>
       <div>
         <Slider {...settings}>
+          {serverData.map((card) =>(
+            <ProductCard key={card.id} {...card} />
+          )
+          )}
           <div>
             <h3><ProductCard id="1"/></h3>
           </div>
@@ -75,14 +79,14 @@ export default class MultipleRows extends Component {
 //     }
     
 
-class SliderItem extends Component {
-    render() {
-        return <div className="slider">
+// class SliderItem extends Component {
+//     render() {
+//         return <div className="slider">
      
-            {serverData.map((snippet, id) => <ProductCard key={id} {...snippet} />)}
-        </div>;
-    }
-}
+//             {serverData.map((snippet, id) => <ProductCard key={id} {...snippet} />)}
+//         </div>;
+//     }
+// }
 
 const serverData = [
   {name: "REVO Morning", price: "$ 19.00", description: "Bitter, sweet aftertaste, floral aroma", src:Morning,id:1},
