@@ -17,11 +17,14 @@ export default class MultipleRows extends Component {
       className: "center",
       centerMode: true,
       infinite: true,
-      centerPadding: "60px",
+      // centerPadding: "6px",
+      // adaptiveHeight:true,
       slidesToShow: 2,
-      speed: 500,
+      speed: 600,
       rows: 2,
-      slidesPerRow: 1
+      slidesPerRow: 1,
+      arrows:true,
+      dots:true,
     };
     return (
       <div className="product">
@@ -32,30 +35,30 @@ export default class MultipleRows extends Component {
             <ProductCard key={card.id} {...card} />
           )
           )}
-          <div>
-            <h3><ProductCard id="1"/></h3>
+          {/* <div>
+            <h3><ProductCard /></h3>
+          </div> */}
+          {/* <div>
+            <h3><ProductCard /></h3>
           </div>
           <div>
-            <h3><ProductCard id="2"/></h3>
+            <h3><ProductCard /></h3>
+          </div> */}
+          {/* <div>
+            <h3><ProductCard /></h3>
+          </div> */}
+          {/* <div>
+            <h3><ProductCard /></h3>
           </div>
           <div>
-            <h3><ProductCard id="3"/></h3>
+            <h3><ProductCard /></h3>
           </div>
           <div>
-            <h3><ProductCard id="4"/></h3>
+            <h3><ProductCard /></h3>
           </div>
           <div>
-            <h3><ProductCard id="5"/></h3>
-          </div>
-          <div>
-            <h3><ProductCard id="6"/></h3>
-          </div>
-          <div>
-            <h3><ProductCard id="1"/></h3>
-          </div>
-          <div>
-            <h3><ProductCard id="2"/>8</h3>
-          </div>
+            <h3><ProductCard /></h3>
+          </div> */}
           
         </Slider>
       </div>
@@ -94,7 +97,9 @@ const serverData = [
   {name: "REVO Everyday", price: "$ 17.00", description: "Balanced, bitter taste of chocolate", src: Everyday,id:3},
   {name: "REVO Rich", price: "$ 16.00", description: "Rich, bitter, traditional flavour", src: Rich,id:4},
   {name: "REVO Honey", price: "$ 19.00", description: "Sweet , with a slight apple sourness", src: Honey,id:5},
-  {name: "REVO Natural", price: "$ 19.00", description: "Sweet aftertaste, floral scent, strawberry sour taste", src: Natural,id:6}
+  {name: "REVO Natural", price: "$ 19.00", description: "Sweet aftertaste, floral scent, strawberry sour taste", src: Natural,id:6},
+  {name: "REVO Everyday", price: "$ 17.00", description: "Balanced, bitter taste of chocolate", src: Everyday,id:7},
+  {name: "REVO Rich", price: "$ 16.00", description: "Rich, bitter, traditional flavour", src: Rich,id:8}
 ]
 
 const ProductText = (props) => {

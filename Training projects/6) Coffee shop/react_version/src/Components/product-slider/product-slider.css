@@ -42,8 +42,7 @@
    width: 559px;
    height: 256px;
    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
-   background-color: #fff;
-   margin-right: 8px;
+   /* background-color: #fff; */
 }
 
 .product__image {
@@ -112,4 +111,20 @@
    padding-left: 30px;
    color: #415167;
 }
-
+.slick-prev {
+   left: 3% !important;
+   z-index: 1;
+ }
+ .slick-next {
+   right: 3% !important;
+   z-index: 1;
+ }
+ /* the slides */
+.slick-slide {
+   margin: 0 0px;
+}
+/* the parent */
+.slick-list {
+   margin: 0 0px;
+}
+ 
