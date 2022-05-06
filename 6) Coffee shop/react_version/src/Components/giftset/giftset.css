@@ -1,0 +1,245 @@
+
+
+.giftset-bg {
+    background: var(--cream);
+    width: 70%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.giftset {
+    padding: 86px 0px 125px 20px;
+    margin-bottom: 100px;
+    position: relative;
+ }
+ .giftset::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 65%;
+    height: 100%;
+    background-color: #edf0f5;
+    z-index: -3;
+ }
+ .giftset__tab {
+    display: flex;
+    max-width: 1138px;
+    margin: 0 auto;
+    position: relative;
+ }
+ .giftset__tab::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 885px;
+    height: 100%;
+    background-color: #fff;
+    z-index: -2;
+    border: 0.5px solid #b9b9b9;
+ }
+ .tab-triggers {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #f6f8fc;
+ }
+ .tabs-triggers__item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 34px;
+    color: #415167;
+    text-decoration: none;
+    padding: 0px 25px;
+ }
+ .tabs-triggers__item--active {
+    background-color: #fff;
+    border: 0.5px solid #b9b9b9;
+    border-left: none;
+    transition: all 0.5;
+ }
+ .tabs-content {
+ }
+ .tabs-content__item {
+    display: none;
+    position: relative;
+ }
+ 
+ .tabs-content__item--active {
+    display: flex;
+    position: relative;
+ }
+ 
+ .giftset__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 60px 40px 40px;
+ }
+ .giftset__price {
+    margin-bottom: 12px;
+ }
+ .giftset__name {
+    margin-bottom: 12px;
+ }
+ .giftset__description {
+    margin-bottom: 24px;
+ }
+ .giftset__info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 46px;
+    padding: 0px 20px;
+ }
+ .giftset__info_1,
+ .giftset__info_2 {
+    display: flex;
+ }
+ .giftset__info_1 img {
+    margin-right: 12px;
+    max-height: 40px;
+    max-height: 40px;
+ }
+ .giftset__info_2 img {
+    margin-right: 12px;
+    max-height: 40px;
+    max-height: 40px;
+ }
+ .info__title,
+ .info__subtitle {
+    font-family: "Nunito";
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 22px;
+    color: #415167;
+ }
+ .giftset__link {
+    display: flex;
+    justify-content: space-between;
+ }
+ .giftset__link {
+    padding: 0px 20px;
+ }
+ .buy {
+    border: none;
+    width: 135px;
+    height: 32px;
+    text-transform: uppercase;
+    background: #c7a17a;
+    border-radius: 19px;
+    font-family: "Nunito";
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: #f9fbff;
+ }
+ 
+ .desc {
+    border: none;
+    background: none;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    padding-left: 30px;
+    color: #415167;
+ }
+ @media (max-width: 1400px) {
+    .giftset::after {
+       width: 80%;
+    }
+    .giftset__tab {
+       margin-right: 50px;
+    }
+ }
+ 
+ @media (max-width: 1279.9px) {
+    .giftset__content {
+       padding: 40px 100px;
+    }
+    .giftset__info {
+       justify-content: space-around;
+       text-align: left;
+    }
+    .giftset__info_1 {
+    }
+    .tabs-content__item--active > img {
+       width: 500px;
+       height: auto;
+    }
+    .tabs-content__item--active {
+       flex-direction: column;
+       align-items: center;
+    }
+    .giftset__tab::after {
+       width: 100%;
+    }
+    .giftset__content {
+       text-align: center;
+    }
+    .giftset__link {
+       justify-content: center;
+    }
+    .buy  {
+       margin-right: 80px;
+    }
+    .desc  {
+        margin-right: 80px;
+     }
+ }
+ @media (max-width: 999px) {
+    .giftset {
+       padding-left: 0px;
+    }
+    .giftset__tab {
+       flex-direction: column-reverse;
+       margin: 0 auto;
+    }
+    .tab-triggers {
+       flex-direction: row;
+    }
+    .tabs-triggers__item {
+       justify-content: center;
+       padding: 15px;
+       border: 0.5px solid #b9b9b9;
+       border-bottom: none;
+    }
+    .giftset::after {
+       width: 100%;
+    }
+ }
+ @media (max-width: 600px) {
+    .tabs-content__item--active > img {
+       margin-top: 30px;
+       width: 300px;
+       height: auto;
+    }
+ }
+ @media (max-width: 450px) {
+    .tabs-content__item--active > img {
+       margin-top: 30px;
+       width: 200px;
+       height: auto;
+    }
+ }
+ @media (max-width: 380px) {
+    .tabs-content__item--active > img {
+       margin-top: 30px;
+       width: 150px;
+       height: auto;
+    }
+ }

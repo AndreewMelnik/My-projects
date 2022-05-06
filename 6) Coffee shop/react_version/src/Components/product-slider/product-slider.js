@@ -133,7 +133,7 @@ class ProductCard extends Component  {
 )}}
 
 
-// export default ProductSlider;
+
 
 
 
