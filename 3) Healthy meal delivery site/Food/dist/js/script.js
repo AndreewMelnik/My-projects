@@ -43,7 +43,7 @@ window.addEventListener('DOMContentLoaded', () => {
     });
     // Timer
 
-    const deadline = '2022-04-10'; //ставим дату завершения таймера
+    const deadline = '2022-05-20'; //ставим дату завершения таймера
 
     function getTimeRemaining(endTime) {
         const t = Date.parse(endTime) - Date.parse(new Date()), //Здесь грубо говоря мы получаем количество миллисекунд оставшееся на данный момент до дедлайна
