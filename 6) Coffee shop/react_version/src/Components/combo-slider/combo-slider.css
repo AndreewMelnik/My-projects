@@ -11,15 +11,21 @@
  }
  .combo__slider {
  }
- .combo__item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+ .combo-slider__item{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   /* width: 349.5px;
+   border: 3x solid transparent;
+   box-shadow: 0 0 3px rgba(0, 0, 0, 0.15); */
  }
+ 
  .combo__img {
     background-color: #edf0f5;
  }
  .product__image {
+   background-color: #EDF0F5;
  }
  .combo__content {
     display: flex;

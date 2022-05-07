@@ -1,6 +1,7 @@
 .product {
    /* position: relative; */
    padding: 90px 0px 128px 0px;
+   z-index:-1;
 
 }
 
@@ -37,6 +38,8 @@
 }
 
 .slider__item {
+   /* position: absolute; */
+   z-index:-1;
    display: flex;
    align-items: center;
    width: 559px;

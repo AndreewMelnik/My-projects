@@ -4,12 +4,12 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
-import Morning from "../../img/svg/morning.svg";
-import Origin from "../../img/svg/origin.svg";
-import Everyday from "../../img/svg/everyday.svg";
-import Rich from "../../img/svg/rich.svg";
-import Honey from "../../img/png/honey.png";
-import Natural from "../../img/png/natural.png";
+import CMorning from "../../img/png/combomorning.png";
+import COrigin from "../../img/png/comboorigin.png";
+import CEveryday from "../../img/png/comboeveryday.png";
+import CRich from "../../img/png/comborich.png";
+import CHoney from "../../img/png/combohoney.png";
+import CNatural from "../../img/png/combonatural.png";
 
 
 
@@ -18,10 +18,11 @@ import Natural from "../../img/png/natural.png";
 export default class ComboSlider extends Component {
     render() {
       const settings = {
+            centerMode: false,
             dots: true,
             infinite: true,
             speed: 700,
-            slidesToShow: 4,
+            slidesToShow: 3,
             slidesToScroll: 2
       };
       return (
@@ -41,12 +42,18 @@ export default class ComboSlider extends Component {
 }
 
 const ComboData = [
-    {name: "Combo Revo Morning", price: "$ 47.00", old_price: "$ 50.00",description: "Bitter, sweet aftertaste, floral aroma", src:Morning,id:1},
-    {name: "Combo Revo Origin", price: "$ 56.00", old_price: "$ 60.00",description: "Sweet, less bitter, sour strawberry flavour", src: Origin,id:2},
-    {name: "Combo Revo Everyday", price: "$ 45.00", old_price: "$ 47.00",description: "Balanced, bitter taste of chocolate", src: Everyday,id:3},
-    {name: "Combo Revo Rich", price: "$ 40.00", old_price: "$ 45.00",description: "Rich, bitter, traditional flavour", src: Rich,id:4},
-    {name: "Combo Revo Honey", price: "$ 47.00", old_price: "$ 50.00",description: "Sweet , with a slight apple sourness", src: Honey,id:5},
-    {name: "Combo Revo Natural", price: "$ 47.00", old_price: "$ 50.00",description: "Sweet aftertaste, floral scent, strawberry sour taste", src: Natural,id:6},
+    {name: "Combo Revo Morning", price: "$ 47.00", old_price: "$ 50.00", src:CMorning, id:1,
+    description: "Revo Morning is an innovation from the perfect recipe that blends the bitter taste of..."},
+    {name: "Combo Revo Origin", price: "$ 56.00", old_price: "$ 60.00", src: COrigin, id:2,
+    description: "If curious about Arabica beans, then Revo Origin will be the right choice to start."},
+    {name: "Combo Revo Everyday", price: "$ 45.00", old_price: "$ 47.00", src: CEveryday, id:3,
+    description: "Revo Everyday is a blend of robusta bean bitterness and aroma."},
+    {name: "Combo Revo Rich", price: "$ 40.00", old_price: "$ 45.00", src: CRich, id:4,
+    description: "The caffeine content in Revo Bold is strong enough to keep you awake to work..."},
+    {name: "Combo Revo Honey", price: "$ 47.00", old_price: "$ 50.00", src: CHoney, id:5,
+    description: "Honey - in the name comes from the method of processing Arabica beans..."},
+    {name: "Combo Revo Natural", price: "$ 47.00", old_price: "$ 50.00", src: CNatural, id:6,
+    description: "Revo Natural is a special coffee line of dedicated to those who want to enjoy..."},
   ]
 
 const ComboText = (props) => {
