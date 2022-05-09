@@ -338,19 +338,19 @@ a {
 }
 
 .offer__slider-prev {
-    margin-right: 10px;
+    margin-right: -20px;
     cursor: pointer
 }
 
 .offer__slider-next {
-    margin-left: 10px;
+    margin-left: -20px;
     cursor: pointer
 }
 
 .offer__slider #current {
     font-size: 48px;
     font-weight: 700;
-    color: #000
+    color: #f87a4a
 }
 
 .offer__slide {
@@ -361,7 +361,8 @@ a {
 .offer__slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover
+    object-fit: cover;
+    border-radius:0.5%
 }
 
 .calculating {
@@ -427,7 +428,7 @@ a {
 
 .calculating__choose-item_active {
     color: #fff;
-    background-color:  rgba(215, 177, 70, 0.77);
+    background-color:  rgba(249, 112, 58, 0.848);
 }
 
 .calculating__choose_medium {
@@ -497,13 +498,15 @@ a {
     background: #fff;
     box-shadow: 0 4px 25px rgba(0, 0, 0, .25);
     font-size: 16px;
-    font-weight: 300
+    font-weight: 300;
+    border-radius: 1%
 }
 
 .menu__item img {
     width: 100%;
     height: 200px;
-    object-fit: cover
+    object-fit: cover;
+    border-radius: 1%
 }
 
 .menu__item-subtitle {
