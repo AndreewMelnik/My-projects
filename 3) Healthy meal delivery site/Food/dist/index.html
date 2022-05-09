@@ -5,16 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,700;0,800;1,300&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
+        <div class="header__logo">
+            <img src="./icons/logo.png" alt="Логотип">
+        </div>
         <div class="header__left-block">
-            <div class="header__logo">
-                <img src="icons/logo.svg" alt="Логотип">
-            </div>
             <nav class="header__links">
-                <a href="#" class="header__link">Доставка питания</a>
-                <a href="#" class="header__link">Второй пункт</a>
+                <a href="#a1" class="header__link">Как это работает?</a>	
+                <a href="#a2" class="header__link">Расчет калорий</a>
+                <a href="#a3" class="header__link">Выберите своё меню</a>
+                <a href="#a4" class="header__link">Акции</a>
             </nav>
         </div>
         <div class="header__right-block">
@@ -37,7 +42,7 @@
         <div class="container">
             <div class="tabcontainer">
                 <div class="tabcontent">
-                    <img src="img/tabs/vegy.jpg" alt="vegy">
+                    <img src="img/tabs/111.jpg" alt="vegy">
                     <div class="tabcontent__descr">
                         Меню "Фитнес" - это новый подход к приготовлению блюд: больше свежих овощей и фруктов. Для людей, которые интересуются спортом; активных и здоровых. Это абсолютно новый продукт с оптимальной ценой и высоким качеством!
                     </div>
@@ -49,13 +54,13 @@
                     </div>
                 </div> 
                 <div class="tabcontent">
-                    <img src="img/tabs/post.jpg" alt="post">
+                    <img src="img/tabs/222.jpg" alt="post">
                     <div class="tabcontent__descr">
                         Наше специальное “Постное меню” - это тщательный подбор ингредиентов: полное отсутствие продуктов животного происхождения. Полная гармония с собой и природой в каждом элементе! Все будет Ом!                                     
                     </div>
                 </div>
                 <div class="tabcontent">
-                    <img src="img/tabs/vegy.jpg" alt="vegy">
+                    <img src="img/tabs/333.jpg" alt="vegy">
                     <div class="tabcontent__descr">
                         Меню "Сбалансированное" - это соответствие вашего рациона всем научным рекомендациям. Мы тщательно просчитываем вашу потребность в к/б/ж/у и создаем лучшие блюда для вас.
                     </div>
@@ -70,7 +75,6 @@
                     </div>
                 </div>
             </div>
-            <div class="preview__life">Живи полной жизнью!</div>
         </div>
     </div>
 
@@ -80,7 +84,7 @@
         <div class="bgc_y"></div>
         <div class="container">
             <div class="offer__text">
-                <h2 class="title">Что мы можем вам предложить?</h2>
+                <h2 class="title" id="a1">Что мы можем вам предложить?</h2>
                 <div class="offer__descr">
                     Наша основная идея - это правильное питание. Оно может быть простым и вкусным. Мы не просто доставка, мы сервис! Мы взяли на себя все расчеты БЖУ, калорийности, объемов порций и прочие важные, но скучные аспекты. Вам остается только полезная, сытная и правильная еда, которую мы привозим прямо под дверь.
                 </div>
@@ -136,7 +140,7 @@
 
     <div class="calculating">
         <div class="container">
-            <h2 class="title">Рассчитаем вашу потребность в калориях?
+            <h2 class="title" id="a2">Рассчитаем вашу потребность в калориях?
             </h2>
             <div class="calculating__field">
                 <div class="calculating__subtitle">
@@ -183,7 +187,7 @@
     <div class="divider"></div>
 
     <div class="menu">
-        <h2 class="title">Наше меню на день</h2>
+        <h2 class="title" id="a3">Наше меню на день</h2>
 
         <div class="menu__field">
             <div class="container">
@@ -210,7 +214,7 @@
         <div class="bgc_y"></div>
         <div class="container">
             <div class="promotion__text">
-                <div class="title">Акция для новых клиентов!</div>
+                <div class="title" id="a4">Акция для новых клиентов!</div>
                 <div class="promotion__descr">
                     Мы ценим каждого клиента и предлагаем вам стать одним из них на очень выгодных условиях. 
                     Каждому, кто закажет доставку питание на неделю, будет предоставлена скидка в размере <span>20%!</span>

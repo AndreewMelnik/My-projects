@@ -1,3 +1,4 @@
+
 //Подключим табы к меню на сайте справа
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -771,7 +772,6 @@ input.addEventListener('input', () => {
 getDynamicInformation('#height');
 getDynamicInformation('#weight');
 getDynamicInformation('#age');
-
 
  });
 

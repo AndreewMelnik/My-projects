@@ -24,11 +24,13 @@ a {
     box-shadow: 0 4px 15px rgba(0, 0, 0, .2);
     cursor: pointer;
     transition: .3s all;
-    outline: 0
+    outline: 0;
+    border-radius: 1%;
 }
 
 .btn_white {
-    background-color: #fff
+    background-color: #fff;
+    border-radius: 3%;
 }
 
 .btn_dark {
@@ -54,6 +56,7 @@ a {
     width: 330px;
     height: 1px;
     margin: 0 auto;
+    margin-top: 30px;
     background-color: rgba(0, 0, 0, .5)
 }
 
@@ -64,7 +67,7 @@ a {
 
 .header {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
     height: 150px;
     padding: 0 100px
@@ -72,12 +75,18 @@ a {
 
 .header__left-block {
     display: flex;
-    justify-content: space-between;
-    min-width: 550px
+    justify-content: center;
+    min-width: 550px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .header__logo {
-    max-width: 170px
+    max-width: 170px;
+    margin-left: auto;
+    margin-right: 5%;
+    
 }
 
 .header__logo img {
@@ -175,9 +184,11 @@ a {
 
 .tabcontainer {
     display: flex;
-    width: 1130px;
+    width: 1230px;
     margin: 0 auto;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, .25)
+    margin-top: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, .25);
+    border-radius: 1%;
 }
 
 .tabcontent {
@@ -188,7 +199,8 @@ a {
 .tabcontent img {
     width: 100%;
     height: 100%;
-    object-fit: cover
+    object-fit: cover;
+    border-radius: 0.5%;
 }
 
 .tabcontent__descr {
@@ -197,18 +209,20 @@ a {
     right: -177px;
     width: 550px;
     height: 359px;
-    background: rgba(251, 254, 93, .8);
+    background: rgba(251, 254, 93, 0.9);
     padding: 50px;
     font-size: 24px;
     font-weight: 300;
     line-height: 36px;
-    color: rgba(0, 0, 0, .7)
+    color: rgba(0, 0, 0, .7);
+    border-radius: 1%;
 }
 
 .tabheader {
     width: 280px;
     padding: 35px 30px;
-    background-color: #fff
+    background-color: #fff;
+    border-radius: 0.5%;
 }
 
 .tabheader h3 {
@@ -298,7 +312,7 @@ a {
 
 .offer__slider {
     width: 650px;
-    margin-top: 50px;
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     align-items: flex-end
