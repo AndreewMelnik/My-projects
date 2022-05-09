@@ -1,10 +1,10 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap&subset=cyrillic-ext);
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Roboto, sans-serif
+    font-family: 'Ubuntu', sans-serif;
 }
 
 a {
@@ -31,6 +31,7 @@ a {
 .btn_white {
     background-color: #fff;
     border-radius: 3%;
+    font-size: 19px;
 }
 
 .btn_dark {
@@ -70,7 +71,11 @@ a {
     /* justify-content: space-between; */
     align-items: center;
     height: 150px;
-    padding: 0 100px
+    padding: 0 100px;
+    font-family: 'Mukta';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
 }
 
 .header__left-block {
@@ -101,12 +106,12 @@ a {
 .header__link {
     position: relative;
     margin-right: 45px;
-    font-weight: 700;
-    font-size: 18px;
+    /* font-weight: 700;
+    font-size: 18px; */
     color: #303030
 }
 
-.header__link:after {
+/* .header__link:after {
     content: '';
     position: absolute;
     display: block;
@@ -116,7 +121,7 @@ a {
     z-index: -1;
     height: 8px;
     background: #54ed39
-}
+} */
 
 .header__link:last-child {
     margin-right: 0
@@ -208,10 +213,10 @@ a {
     top: 300px;
     right: -177px;
     width: 550px;
-    height: 359px;
-    background: rgba(251, 254, 93, 0.9);
-    padding: 50px;
-    font-size: 24px;
+    height: 300px;
+    background: rgba(237, 217, 163, 0.9);
+    padding: 40px;
+    font-size: 22px;
     font-weight: 300;
     line-height: 36px;
     color: rgba(0, 0, 0, .7);
@@ -422,7 +427,7 @@ a {
 
 .calculating__choose-item_active {
     color: #fff;
-    background-color: #54ed39
+    background-color:  rgba(215, 177, 70, 0.77);
 }
 
 .calculating__choose_medium {
