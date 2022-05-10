@@ -10,11 +10,12 @@ const Giftset = () => {
                 <p>Best Gift For Best Friend</p>
                 <h1>GIFTSET</h1>
             </div>
+
             <GiftsetToggler {...settings}>
               {serverData.map((card) =>(
                 <GiftsetContent key={card.id} {...card}/>
-             ))}
-          </GiftsetToggler>
+                ))}
+            </GiftsetToggler>
 
 
         </div>

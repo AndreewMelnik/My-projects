@@ -25,14 +25,14 @@ const HeaderWrapper = () => {
 const HeaderMenu = () => {
     return(
         <nav className="header__menu">
-        <ul className="header__list">
-            <HeaderItem name="COFFEE" />
-            <HeaderItem name="GIFTSETS" />
-            <HeaderItem name="HOUSE BLENDS" />
-            <HeaderItem name="COMBO SETS" />
-            <HeaderItem name="CONTACT US" />
-        </ul>
-    </nav>
+            <ul className="header__list">
+                <HeaderItem name="COFFEE" />
+                <HeaderItem name="GIFTSETS" />
+                <HeaderItem name="HOUSE BLENDS" />
+                <HeaderItem name="COMBO SETS" />
+                <HeaderItem name="CONTACT US" />
+            </ul>
+        </nav>
     )
 }
 
