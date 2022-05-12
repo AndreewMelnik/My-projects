@@ -37,11 +37,11 @@ onToggleIncrease = (id) => {
 
 
 const giftsetData = [
-    {name: "GIFTSET “CÀ PHÊ PHIN VIỆT NAM”", price: "$ 20.00", src:giftset1, beans: "Độ cao", height: "700 - 800m ",id:1, 
+    {name: "GIFTSET “CÀ PHÊ PHIN VIỆT NAM”", price: "$ 20.00", src:giftset1, beans: "Độ cao", height: "700 - 800m ",id: 1, 
     description: "Món quà tuyệt vời dành cho người sành cà phê.Hạt cà phê được Revo cẩn trọng chọn lựa, rang xay theo công nghệ và bí quyết học hỏi từ nhữngnghệ nhân nổi tiếng, cùng với tình yêu, sự đam mê của người làm cà phê… tạo ra những táchcà phê tinh khiết chỉ dành riêng cho bạn."},
-    {name: "GIFTSET “TỐ NỮ", price: "$ 23.00", src:giftset2, beans: "Độ cao", height: "700 - 800m ", id:2, 
+    {name: "GIFTSET “TỐ NỮ", price: "$ 23.00", src:giftset2, beans: "Độ cao", height: "700 - 800m ", id: 2, 
     description: "Món quà tặng rất Việt Nam: thể hiện tính truyền thống từ sản phẩm cho tới bao bì và được đặt trong thiết kế hiện đại – độc đáo!.Bộ giftset Tố Nữ tiêu chuẩn bao gồm: – Hộp đựng 2 tầng bằng giấy kraft, với thiết kế lấy ý tưởng từ bộ tranh Tố Nữ – thuộc dòng tranh dân gian Hàng Trống– Gói cà phê Revo Morning 250gr – với gu vị cân bằng, là món quà tuyệt vời dành cho những người nước ngoài muốn thử hương vị cà phê Việt Nam chất lượng cao– Phin mạ màu cao cấp từ Revo Coffee"},
-    {name: "MODERN VIETNAMESE COFFEE BLEND BOX", price: "$ 25.00",src:giftset3,beans: "Độ cao", height: "700 - 800m ", id:3, 
+    {name: "MODERN VIETNAMESE COFFEE BLEND BOX", price: "$ 25.00",src:giftset3,beans: "Độ cao", height: "700 - 800m ", id: 3, 
     description: "Trên các cao nguyên của Việt Nam.Cây cà phê được chăm chút bởi hơi nước , ánh sáng , gió , mưa  và sự cần cù của người nông dân chân chất, kết tinh thành những hạt cà phê chất lượng, đậm đà, đặc trưng…Hạt cà phê được Revo cẩn trọng chọn lựa, rang xay theo công nghệ và bí quyết học hỏi từ những nghệ nhân nổi tiếng, cùng với tình yêu, sự đam mê của người làm cà phê… tạo ra những tách cà phê tinh khiết chỉ dành riêng cho bạn.Bộ blend box gồm 3 hương vị đặc trưng của Revo: Revo Origin, Revo Natural, Revo Honey."},
 ]
 
