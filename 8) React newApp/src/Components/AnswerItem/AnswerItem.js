@@ -4,6 +4,7 @@ const AnswerItem = props => {
   return (
     <li
       className='AnswerItem'
+      onClick={() => props.onAnswerClick(props.answer.Id)}
     >
       { props.answer.text }
     </li>
