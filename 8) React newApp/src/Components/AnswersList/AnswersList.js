@@ -7,16 +7,14 @@ const AnswersList = props => (
   { props.answers.map((answer, index) => {
     return (
         <AnswerItem
-          key={index}
-          answer={answer}
-          onAnswerClick={props.onAnswerClick}
+          key= {index}
+          answer= {answer}
+          onAnswerClick= {props.onAnswerClick}
         />
-    )
-  }) }
+  )
+  })}
+  
 </ul>
-
-
-
 
 )
 

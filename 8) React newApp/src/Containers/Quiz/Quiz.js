@@ -9,10 +9,10 @@ class Quiz extends Component {
                 question: 'What color is sky?',
                 rightAnswerId: 2,
                 answers:[
-                    {text:'Question 1', id:1},
-                    {text:'Question 2', id:2},
-                    {text:'Question 3', id:3},
-                    {text:'Question 4', id:4}
+                          {text:'Question 1', id:1},
+                          {text:'Question 2', id:2},
+                          {text:'Question 3', id:3},
+                          {text:'Question 4', id:4}
                 ]
             }
         ]
