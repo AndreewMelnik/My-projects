@@ -5,6 +5,7 @@ import FinishedQuiz from '../../Components/FinishedQuiz/FinishedQuiz'
 
 class Quiz extends Component {
     state = {
+      results: {}, // { [id]: 'success' 'error' }
       isFinished: false,
       activeQuestion: 0,
       answerState: null, // { [id]: 'success' 'error' }
@@ -38,11 +39,14 @@ class Quiz extends Component {
 
     onAnswerClickHandler = answerId => {
       const question = this.state.quiz[this.state.activeQuestion]
-  
+      const results = this.state.results
       if (question.rightAnswerId === answerId) {
-  
+        if (!results[question.id]) {
+          results[question.id] = 'success'
+        }
         this.setState({
-          answerState: {[answerId]: '__success'}
+          answerState: {[answerId]: '__success'},
+          results
         })
   
         const timeout = window.setTimeout(() => {
@@ -56,14 +60,13 @@ class Quiz extends Component {
               answerState: null
             })
           }
-  
           window.clearTimeout(timeout)
         }, 1000)
-  
-  
       } else {
+        results[question.id] = 'error'
         this.setState({
-          answerState: {[answerId]: '__error'}
+          answerState: {[answerId]: '__error'},
+          results
         })
       }
 
@@ -81,7 +84,9 @@ class Quiz extends Component {
                   {
                       this.state.isFinished
                       ? <FinishedQuiz
-
+                          results={this.state.results}
+                          quiz={this.state.quiz}
+                          onRetry={this.retryHandler}
                           />
                       : <ActiveQuiz
                       answers={this.state.quiz[this.state.activeQuestion].answers}
