@@ -6,7 +6,7 @@ const AnswerItem = props => {
 
   if (props.state) {
             classNames +=[props.state];
-        }
+  }
   
   return (
     <li
