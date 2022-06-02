@@ -21,8 +21,8 @@ class Drawer extends Component {
         <li key={index}>
           <NavLink
             to={link.to}
-            exact={link.exact}
-            activeClassName={'active'}
+            // exact={link.exact}
+            // activeClassName={'active'}
             onClick={this.clickHandler}
            >
             {link.label}
