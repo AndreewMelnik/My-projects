@@ -11,7 +11,7 @@ export default class QuizList extends Component {
           key={index}
         >
           <NavLink to={'/quiz/' + quiz}>
-            Тест {quiz}
+            Quiz {quiz}
           </NavLink>
         </li>
       )
@@ -22,7 +22,7 @@ export default class QuizList extends Component {
     return (
       <div className={'QuizList'}>
         <div>
-          <h1>Список тестов</h1>
+          <h1>Quiz list</h1>
 
           <ul>
             { this.renderQuizes() }
