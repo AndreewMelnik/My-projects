@@ -13,7 +13,7 @@ h1 {
     :hover {
         color:blue;
     }
-  }
+  }..
   
 h2 {
     font-size: 1.2rem;
