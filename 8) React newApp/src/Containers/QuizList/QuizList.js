@@ -25,6 +25,7 @@ export default class QuizList extends Component {
     })
   }
   // Для обращения к бэкенду мы всегда используем "componentDidMount"
+  
   async componentDidMount() {
     try {
       const response = await axios.get('https://react-quiz-a171e-default-rtdb.europe-west1.firebasedatabase.app/quizes.json')

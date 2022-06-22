@@ -147,7 +147,7 @@ export default class Auth extends Component {
           { this.renderInputs() }
 
             <Button
-              className="success"//???????????????????
+              className="success"//???
               onClick={this.loginHandler}
               disabled={!this.state.isFormValid}
             >
@@ -155,7 +155,7 @@ export default class Auth extends Component {
             </Button>
 
             <Button
-              type="primary"//???????????????????
+              type="primary"//???
               onClick={this.registerHandler}
               disabled={!this.state.isFormValid}
             >
